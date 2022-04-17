@@ -22,7 +22,7 @@ import twitter
 )
 @click.option(
     "--access-token-secret",
-    envvar="TWITER_ACCESS_TOKEN_SECRET",
+    envvar="TWITTER_ACCESS_TOKEN_SECRET",
     help="Twitter access token secret",
 )
 def cli(
