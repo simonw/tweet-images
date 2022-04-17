@@ -15,7 +15,7 @@ Install this tool using `pip`:
 
 ## Usage
 
-You'll need a consumer key, consumer secret, access token key and access token secret for a Twitter account that you wish to tweet from.
+You'll need a consumer key, consumer secret, access token key and access token secret for a Twitter account that you wish to tweet from. See [How to get credentials for a new Twitter bot](https://til.simonwillison.net/twitter/credentials-twitter-bot) for tips on obtaining these.
 
 You can pass those as the `--consumer-key`, `--consumer-secret`, `--access-token-key`, `--access-token-secret` options to the command, or you can set them as environment variables like this:
 ```
