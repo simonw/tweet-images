@@ -42,6 +42,21 @@ You can pass `--alt "alt text"` one or more times to attach alt text to your ima
     tweet-images "Three pictures attached" one.jpg two.jpg \
       --alt "Alt text for one" --alt "Alt text for two"
 
+## Using this with GitHub Actions
+
+Here's an example fragment from [a GitHub Actions workflow](https://github.com/simonw/covidsewage-bot/blob/bd9dcae5bcf020047955283971608507f3cd3169/.github/workflows/tweet.yml#L40-L48) that uses this tool. The repository has four repository secrets configured with the necessary credentials, and a previous step has already installed the `tweet-images` Python package:
+
+```yaml
+    - name: Tweet the new image
+      env:
+        TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
+        TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
+        TWITTER_ACCESS_TOKEN_KEY: ${{ secrets.TWITTER_ACCESS_TOKEN_KEY }}
+        TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+      run: |-
+        tweet-images "Latest Covid sewage charts for the SF Bay Area" \
+          /tmp/covid.png --alt "Screenshot of the charts"
+```
 ## Development
 
 To contribute to this tool, first checkout the code. Then create a new virtual environment:
