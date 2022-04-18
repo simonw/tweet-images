@@ -13,6 +13,10 @@ Install this tool using `pip`:
 
     pip install tweet-images
 
+## Example
+
+This tool is used by the [@covidsewage](https://twitter.com/covidsewage) bot on Twitter, see [simonw/covidsewage-bot](https://github.com/simonw/covidsewage-bot) and [Building a Covid sewage Twitter bot](https://simonwillison.net/2022/Apr/18/covid-sewage/).
+
 ## Usage
 
 You'll need a consumer key, consumer secret, access token key and access token secret for a Twitter account that you wish to tweet from. See [How to get credentials for a new Twitter bot](https://til.simonwillison.net/twitter/credentials-twitter-bot) for tips on obtaining these.
